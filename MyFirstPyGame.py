@@ -1,4 +1,4 @@
-# My First PyGame, Bruce Johnson, 11/29/21 2:38m, v0.3
+# My First PyGame, Bruce Johnson, 11/29/21 2:41m, v0.4
 
 import pygame, sys 
 from pygame.locals import *
@@ -8,7 +8,7 @@ pygame.init()
 
 # Setup our window. 1
 windowSurface = pygame.display.set_mode((500, 400), 0, 32)
-pygame.display.set_caption('hello, world!')
+pygame.display.set_caption('Hello, world!')
 
 # setup colors
 BLACK = (0, 0, 0)
@@ -23,3 +23,5 @@ basicFont = pygame.font.SysFont(None, 48)
 # Setup text.
 text = basicFont.render('Hello, world!', True, WHITE, BLUE) 
 textRect = text.get_rect()
+textRect.centerx = windowSurface. get_rect().centerx 
+textRect.centerx = windowSurface. get_rect().centery
