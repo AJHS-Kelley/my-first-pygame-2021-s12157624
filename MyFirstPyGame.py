@@ -1,1 +1,0 @@
-# My First PyGame, Bruce Johnson, 11/29/21 1:58pm, v0.0
