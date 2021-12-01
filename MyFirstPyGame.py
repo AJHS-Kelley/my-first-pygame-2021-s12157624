@@ -1,4 +1,4 @@
-# My First PyGame, Bruce Johnson, 11/29/21 2:41m, v0.4
+# My First PyGame, Bruce Johnson, 12/1/21 1:555m, v0.6
 
 import pygame, sys 
 from pygame.locals import *
@@ -31,4 +31,9 @@ textRect.centerx = windowSurface. get_rect().centery
 windowSurface.fill(NOTPURPLE) 
 
 # Draw a polygon onto the screen.
-pygame.draw.polygon(windowSurface, BLACK,
+pygame.draw.polygon(windowSurface, BLACK, ((146,0), (291, 106), (236,277), (56, 277), (0, 106)))
+
+# Draw line on the screen.
+pygame.draw.line(windowSurface, WHITE, (60, 60), (120, 60), 4)
+pygame.draw.line(windowSurface, GREEN, (75, 60), (60, 75), 2)
+pygame.draw.line(windowSurface, RED, (0, 150), (150, 0), 1)
