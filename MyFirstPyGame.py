@@ -24,4 +24,10 @@ basicFont = pygame.font.SysFont(None, 48)
 text = basicFont.render('Hello, world!', True, WHITE, BLUE) 
 textRect = text.get_rect()
 textRect.centerx = windowSurface. get_rect().centerx 
-textRect.centerx = windowSurface. get_rect().centery
+textRect.centerx = windowSurface. get_rect().centery 
+
+# Fill background color.
+windowSurface.fill(RED) 
+
+# Draw a polygon onto the screen.
+pygame.draw.polygon(windowSurface, BLACK, ()
