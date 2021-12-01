@@ -15,7 +15,8 @@ BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
 GREEN = (0, 255, 0) 
-BLUE = (0, 0, 255) 
+BLUE = (0, 0, 255)
+NOTPURPLE = (154, 0, 254) 
 
 # Setup font.
 basicFont = pygame.font.SysFont(None, 48)
@@ -27,7 +28,7 @@ textRect.centerx = windowSurface. get_rect().centerx
 textRect.centerx = windowSurface. get_rect().centery 
 
 # Fill background color.
-windowSurface.fill(RED) 
+windowSurface.fill(NOTPURPLE) 
 
 # Draw a polygon onto the screen.
-pygame.draw.polygon(windowSurface, BLACK, ()
+pygame.draw.polygon(windowSurface, BLACK,
