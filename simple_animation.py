@@ -1,4 +1,4 @@
-# Simple Animation with PyGame, Bruce Johnson, 12/9/21, 2:14pm. v0.1 
+# Simple Animation with PyGame, Bruce Johnson, 1/11/22, 2:19pm. v0.2
 
 import pygame, sys, time
 from pygame.locals import *
@@ -11,3 +11,11 @@ WINDOWWIDTH = 400
 WINDOWHEIGHT = 400
 windowsurface = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT), 0, 32)
 pygame.display.set_caption('Animation Example')
+
+# setup the direction variables.
+DOWNLEFT = 'downleft'
+DOWNRIGHT = 'downright'
+UPLEFT = 'upleft'
+UPRIGHT = 'upright'
+
+MOVESPEED = 4 
