@@ -1,6 +1,5 @@
 # Simple Animation with PyGame, Bruce Johnson, 1/11/22, 2:46pm. v0.4
 
-From PyGamePractice import GREEN
 import pygame, sys, time
 from pygame.locals import *
 
