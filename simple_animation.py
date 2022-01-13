@@ -1,4 +1,4 @@
-# Simple Animation with PyGame, Bruce Johnson, 1/13/22, 1:43pm. v0.5
+# Simple Animation with PyGame, Bruce Johnson, 1/13/22, 2:00pm. v0.6
 
 import pygame, sys, time
 from pygame.locals import *
@@ -9,7 +9,7 @@ pygame.init()
 # setup the widow
 WINDOWWIDTH = 400
 WINDOWHEIGHT = 400
-windowsurface = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT), 0, 32)
+windowSurface = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT), 0, 32)
 pygame.display.set_caption('Animation Example')
 
 # setup the direction variables.
@@ -39,3 +39,22 @@ while True:
         if event.type == QUIT:
             pygame.quit()
             sys.exit()
+
+    windowSurface.fill(WHITE)
+
+    for b in boxes:
+        # Move the box data structure.
+        if b['dir'] == DOWNLEFT:
+            b['rect'].left -= MOVESPEED
+            b['rect'].top += MOVESPEED
+        if b['dir'] == DOWNRIGHT:
+            b['rect'].left += MOVESPEED
+            b['rect'].top += MOVESPEED
+        if b['dir'] == UPLEFT:
+            b['rect'].left -= MOVESPEED
+            b['rect'].top -= MOVESPEED
+        if b['dir'] == UPRIGHT:
+            b['rect'].left += MOVESPEED
+            b['rect'].top -= MOVESPEED
+
+
