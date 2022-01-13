@@ -1,4 +1,4 @@
-# Simple Animation with PyGame, Bruce Johnson, 1/13/22, 2:25pm. v0.7
+# Simple Animation with PyGame, Bruce Johnson, 1/13/22, 2:34pm. v0.8
 
 import pygame, sys, time
 from pygame.locals import *
@@ -82,3 +82,9 @@ while True:
                 if b['dir'] == UPRIGHT:
                     b['dir'] = UPLEFT
 
+        # Draw the box onto the game suface.
+        pygame.draw.rect(windowSurface, b['color'], b['rect'])
+
+    # Draw the widow to the screen.
+    pygame.display.update()
+    time.sleep(0.02)                
