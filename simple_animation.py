@@ -1,4 +1,4 @@
-# Simple Animation with PyGame, Bruce Johnson, 1/13/22, 2:43pm. v0.9
+# Simple Animation with PyGame, Bruce Johnson, 1/13/22, 2:43 pm. v0.9
 
 import pygame, sys, time
 from pygame.locals import *
