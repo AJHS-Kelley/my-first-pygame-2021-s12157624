@@ -1,4 +1,4 @@
-# PyGame Collision Detection Practice, Johnson Bruce, January 28, 2022, 5:55pm, v1.1a-DUFIX
+# PyGame Collision Detection Practice, Johnson Bruce, January 28, 2022,6:05pm, v2.0
 
 import pygame, sys, random
 from pygame.locals import*
@@ -11,7 +11,7 @@ mainClock = pygame.time.Clock()
 WINDOWWIDTH = 400
 WINDOWHEIGHT = 400
 windowSurface = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT), 0, 32)
-pygame.display.sett_caption('collision Detection 2022')
+pygame.display.set_caption('collision Detection 2022')
 
 # Setup colors.
 BLACK = (0, 0, 0)
@@ -26,7 +26,7 @@ player = pygame.Rect(300, 100,50,50)
 foods = []
 
 for i in range(20):
-    foods.append(pygame.Rect(random.randint(0, WINDOWWIDTH - FOODSIZE), random.radint(0, WINDOWHEIGHT - FOODSIZE), FOODSIZE, FOODSIZE))
+    foods.append(pygame.Rect(random.randint(0, WINDOWWIDTH - FOODSIZE), random.randint(0, WINDOWHEIGHT - FOODSIZE), FOODSIZE, FOODSIZE))
 
 # Movement Variables
 moveLeft = False
@@ -81,7 +81,7 @@ while True:
     if foodCounter >= NEWFOOD:
         # Add new food.
         foodCounter = 0
-        foods.append(pygame.Rect(random.ranint(0,WINDOWWIDTH - FOODSIZE), random.randint(0, WINDOWHEIGHT - FOODSIZE), FOODSIZE, FOODSIZE))
+        foods.append(pygame.Rect(random.randint(0,WINDOWWIDTH - FOODSIZE), random.randint(0, WINDOWHEIGHT - FOODSIZE), FOODSIZE, FOODSIZE))
 
     # Draw white background on Window Surface.
     windowSurface.fill(WHITE)  
@@ -101,9 +101,13 @@ while True:
 
     # Check for Player colliding with foods(s).
     for food in foods[:]:
-        if player.colliderecr(food):
+        if player.colliderect(food):
             foods.remove(food)
 
     # Draw the food
     for i in range(len(foods)):
         pygame.draw.rect(windowSurface, GREEN, foods[i])
+
+    # Draw the window to the screen.
+    pygame.display.update()
+    mainClock.tick(40) 
